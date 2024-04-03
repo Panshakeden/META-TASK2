@@ -1,0 +1,84 @@
+[
+  {
+    "type": "function",
+    "name": "getAllUsers",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple[]",
+        "internalType": "struct ENS.User[]",
+        "components": [
+          { "name": "account", "type": "address", "internalType": "address" },
+          { "name": "name", "type": "bytes32", "internalType": "bytes32" },
+          { "name": "image", "type": "string", "internalType": "string" }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getIsRgisteredAddress",
+    "inputs": [],
+    "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "registarUser",
+    "inputs": [
+      { "name": "_name", "type": "bytes32", "internalType": "bytes32" },
+      { "name": "_img", "type": "string", "internalType": "string" }
+    ],
+    "outputs": [
+      { "name": "successful", "type": "bool", "internalType": "bool" }
+    ],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "event",
+    "name": "ManageAccount",
+    "inputs": [
+      {
+        "name": "username",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      },
+      {
+        "name": "image",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      },
+      { "name": "", "type": "bool", "indexed": false, "internalType": "bool" }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Registeration",
+    "inputs": [
+      {
+        "name": "sender",
+        "type": "address",
+        "indexed": true,
+        "internalType": "address"
+      },
+      {
+        "name": "username",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      },
+      {
+        "name": "image",
+        "type": "string",
+        "indexed": false,
+        "internalType": "string"
+      }
+    ],
+    "anonymous": false
+  }
+]
